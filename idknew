@@ -9,14 +9,234 @@ local ModBan = Rep.Events.ModBan
 ModBan:Destroy()
 BanClient:Destroy()
 Ban:Destroy()
-local Window = Library.CreateLib("MYSTIC FALLS PRIVATE", "Ocean")
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Mystic Falls Gui Loaded";
+	Text = "Created By Stacey"
+})
+local Window = Library.CreateLib("MYSTIC FALLS PRIVATE", "Sentinel")
 local Tab = Window:NewTab("Witches")
 local Section = Tab:NewSection("Witches")
 
 Section:NewButton("Keybinds", "ButtonInfo", function()
-	
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'T'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Teleport", 
+					[2] = mouse.Hit.p
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
     print("Clicked")
 end)
+local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'B'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Invisibility"
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'N'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Explosion", 
+					[2] = mouse.Hit.p
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+		end
+	end)
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'Q'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "SleepSpell", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "SleepSpell", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'M'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "TelekineticHeart", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "TelekineticHeart", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'L'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "DisableRing", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "DisableRing", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'K'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "EnableRing", 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "EnableRing", 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+
+
+
+
 
 Section:NewButton("Delfan server", "ButtonInfo", function()
 	local Plr = game.Players.LocalPlayer
@@ -94,6 +314,14 @@ Section:NewButton("Sleep everyone", "ButtonInfo", function()
 	end
 
 end)
+Section:NewButton("DeleteChannel", "ButtonInfo", function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+
+	local Channel = Character:WaitForChild("Channeling")
+	Channel:Destroy()
+end)
+
 Section:NewButton("Vervain loop", "ButtonInfo", function()
 	 local Player = game.Players.LocalPlayer
 	local Character = Player.Character
@@ -143,13 +371,213 @@ Section:NewButton("Infinite Stamina", "ButtonInfo", function()
 	local Stamina = Character:WaitForChild("Stamina")
 	local Max = Stamina.Max
 
-	Max.Value = 5000000000000000000000
+	Max.Value = 9000000000000000
 	wait()
-	Stamina.Value = 5000000000000000000000
+	Stamina.Value = 9000000000000000
 end)
 
     print("Clicked")
-    
-	Section:NewButton("other", "ButtonInfo", function()
-	    end)
-	    
+
+	local Tab = Window:NewTab("Misc")
+	local Section = Tab:NewSection("Misc")
+	
+	Section:NewButton("Respawn", "ButtonInfo", function()
+			local Event = game:GetService("ReplicatedStorage").Events.Respawn
+			Event:FireServer()
+		end)
+		print("Clicked")
+	
+	Section:NewButton("mortal respawn", "ButtonInfo", function()
+		local LocalPlayer = game.Players.LocalPlayer
+		local Character = LocalPlayer.Character
+		local Humanoid = Character.Humanoid
+		local Mouse = LocalPlayer:GetMouse()
+		local Respawn = game:GetService("ReplicatedStorage").Events.Respawn
+		Respawn:FireServer()
+		wait(1)
+		local Morph = game:GetService("ReplicatedStorage").Events.Morph
+		Morph:FireServer("Mortal")
+	end)
+		print("Clicked")
+		Section:NewButton("Wolf bite", "ButtonInfo", function()
+			local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Humanoid = Character.Humanoid
+	local UserInputService = game:GetService("UserInputService")
+	local mouse = Player:GetMouse()
+	--local Debounce = true
+	local Key = 'q'
+	local db = true
+
+	UserInputService.InputBegan:Connect(function(input, IsTyping)
+		if IsTyping then return end
+		if input.KeyCode == Enum.KeyCode[Key] then
+			local A_1 = "Bite"
+			local A_2 = 
+				{
+					[1] = false, 
+					[2] = mouse.Target.Parent
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Werewolf
+			Event:FireServer(A_1, A_2)
+
+			UserInputService.InputBegan:Connect(function(input, IsTyping)
+				if IsTyping then return end
+				if input.KeyCode == Enum.KeyCode[Key] then
+					local A_1 = "Bite"
+					local A_2 = 
+						{
+							[1] = false, 
+							[2] = mouse.Target.Parent.Parent
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Werewolf
+					Event:FireServer(A_1, A_2)
+				end
+			end)
+		end
+	end)
+end)
+
+
+local Section = Tab:NewSection("Qetsiyah")
+Section:NewButton("goto qet", "ButtonInfo", function()
+	local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			Player.CFrame = Qetsiyah.HumanoidRootPart.CFrame
+		end
+	end
+end)
+Section:NewButton("Heal Qet", "ButtonInfo", function()
+	local A_1 = "Magic"
+	local A_2 = 
+		{
+			[1] = "Invisibility"
+		}
+	local Event = game:GetService("ReplicatedStorage").Events.Witch
+	Event:FireServer(A_1, A_2)
+
+	local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			local A_1 = "Heal"
+			local A_2 = 
+				{
+					[1] = Qetsiyah
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Vampire
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+Section:NewButton("Push Qet", "ButtonInfo", function()
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			local A_1 = "Push"
+			local A_2 = 
+				{
+					[1] = Qetsiyah
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+Section:NewButton("Push Qets dead body", "ButtonInfo", function()
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "Motus",
+					[2] = true,
+					[3] = game:GetService("Workspace").deathClones[(Qetsiyah.Name)..("deathClone")]
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+Section:NewButton("sleep Qetsiyah", "ButtonInfo", function()
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "SleepSpell", 
+					[2] = Qetsiyah
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+Section:NewButton("Delfan Qet", "ButtonInfo", function()
+	local Live = game.Workspace.Live 
+	for _, child in pairs (Live:GetDescendants()) do
+		if child.Name == "QetsiyahMove" then
+			local Qetsiyah = child.Parent
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "TelekineticHeart", 
+					[2] = Qetsiyah
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+local Section = Tab:NewSection("Teleportation Portals")
+Section:NewButton("Teleport to Red Rose Coven", "Teleport to Red Rose", function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-376, -268, -4881)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.1)
+	pl.CFrame = location
+end)
+Section:NewButton("faction wolf den", "teleport to wolf den", function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(406, 5, 570)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.1)
+	pl.CFrame = location
+end)
+Section:NewButton("Witch tunnel", "teleport to witch tunnel", function()
+	local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-225, -26, -69)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.1)
+	pl.CFrame = location
+end)
+Section:NewButton("Human Spawn", "telepor to human spawn ", function()
+	pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+	local location = CFrame.new(-502, 5, 261)
+	local humanoid = game.Players.LocalPlayer.Character.Humanoid
+	humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	wait(0.1)
+	pl.CFrame = location
+end)
+
+
+
+
+
+
+
+
+
+	
