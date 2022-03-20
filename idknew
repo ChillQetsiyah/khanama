@@ -12,245 +12,144 @@ Ban:Destroy()
 local Window = Library.CreateLib("MYSTIC FALLS PRIVATE", "Ocean")
 local Tab = Window:NewTab("Witches")
 local Section = Tab:NewSection("Witches")
-Section:NewButton("Invisible Keybind", "ButtonInfo", function()
-    local Player = game.Players.LocalPlayer
-local Character = Player.Character
-local Humanoid = Character.Humanoid
-local UserInputService = game:GetService("UserInputService")
-local mouse = Player:GetMouse()
---local Debounce = true
-local Key = 'q'
-local db = true
 
-UserInputService.InputBegan:Connect(function(input, IsTyping)
-if IsTyping then return end
-if input.KeyCode == Enum.KeyCode[Key] then
-local A_1 = "Magic"
-local A_2 = 
-{
-    [1] = "Invisibility", 
-}
-local Event = game:GetService("ReplicatedStorage").Events.Witch
-Event:FireServer(A_1, A_2)
-
-end
-end)
-    print("Clicked")
-end)
 Section:NewButton("Keybinds", "ButtonInfo", function()
-    local Player = game.Players.LocalPlayer
-local Character = Player.Character
-local Humanoid = Character.Humanoid
-local UserInputService = game:GetService("UserInputService")
-local mouse = Player:GetMouse()
---local Debounce = true
-local Key = 'J'
-local db = true
-
-UserInputService.InputBegan:Connect(function(input, IsTyping)
-if IsTyping then return end
-if input.KeyCode == Enum.KeyCode[Key] then
-local A_1 = "Magic"
-local A_2 = 
-{
-    [1] = "FireCircle", 
-    [2] = mouse.Target.Parent
-}
-local Event = game:GetService("ReplicatedStorage").Events.Witch
-Event:FireServer(A_1, A_2)
-
-UserInputService.InputBegan:Connect(function(input, IsTyping)
-if IsTyping then return end
-if input.KeyCode == Enum.KeyCode[Key] then
-local A_1 = "Magic"
-local A_2 = 
-{
-    [1] = "FireCircle", 
-    [2] = mouse.Target.Parent.Parent
-}
-local Event = game:GetService("ReplicatedStorage").Events.Witch
-Event:FireServer(A_1, A_2)
-end
-end)
-end
-end)
-local Player = game.Players.LocalPlayer
-local Character = Player.Character
-local Humanoid = Character.Humanoid
-local UserInputService = game:GetService("UserInputService")
-local mouse = Player:GetMouse()
---local Debounce = true
-local Key = 'N'
-local db = true
- 
-UserInputService.InputBegan:Connect(function(input, IsTyping)
-if IsTyping then return end
-if input.KeyCode == Enum.KeyCode[Key] then
-local A_1 = "Magic"
-local A_2 = 
-{
-    [1] = "SnapAll"
-}
-local Event = game:GetService("ReplicatedStorage").Events.Witch
-Event:FireServer(A_1, A_2)
- 
-end
-end)
-local Player = game.Players.LocalPlayer
-local Character = Player.Character
-local Humanoid = Character.Humanoid
-local UserInputService = game:GetService("UserInputService")
-local mouse = Player:GetMouse()
---local Debounce = true
-local Key = 'M'
-local db = true
-
-UserInputService.InputBegan:Connect(function(input, IsTyping)
-if IsTyping then return end
-if input.KeyCode == Enum.KeyCode[Key] then
-local A_1 = "Magic"
-local A_2 = 
-{
-    [1] = "Motus",
-    [2] = false,
-}
-local Event = game:GetService("ReplicatedStorage").Events.Witch
-Event:FireServer(A_1, A_2)
-
-end
-end)
-    print("Clicked")
-end)
-Section:NewButton("See Ghosts", "ButtonInfo", function()
-    print("Clicked")
-    local plr = game.Players.LocalPlayer
-local char = plr.Character or plr.CharacterAdded:Wait()
-local fold = Instance.new("Folder")
-fold.Name = "SeeGhosts"
-fold.Parent = char
-end)
-local Tab = Window:NewTab("Misc")
-local Section = Tab:NewSection("THE MISC")
-Section:NewButton("Infinite yeild", "Admin Commands", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    print("Clicked")
-end)
-Section:NewButton("Antiban", "Admin Commands", function()
-    local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Rep = game:GetService("ReplicatedStorage")
-	local Ban = Rep.Events.Ban
-	local BanClient = Rep.Events.BanClient
-	local ModBan = Rep.Events.ModBan
-
-	ModBan:Destroy()
-	BanClient:Destroy()
-	Ban:Destroy()
-end)
-    print("Clicked")
-Section:NewButton("Infinite stamina", "ButtonInfo", function()
-    
-    local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Stamina = Character:WaitForChild("Stamina")
-	local Max = Stamina.Max
-
-	Max.Value = 10000000000000000000000000000000000000
-	wait()
-	Stamina.Value = 10000000000000000000000000000000000000
-end)
-    print("Clicked")
-    Section:NewButton("Respawn", "Admin Commands", function()
-        local Event = game:GetService("ReplicatedStorage").Events.Respawn
-	Event:FireServer()
-end)
-        print("Clicked")
-local Tab = Window:NewTab("Occupied Check")
-
-local Tab = Window:NewTab("Qetsiyah")
-Section:NewButton("TP TO QET", "Teleport to Qet", function()
-    local Player = game.Players.LocalPlayer.Character.HumanoidRootPart
-	local Live = game.Workspace.Live 
-	for _, child in pairs (Live:GetDescendants()) do
-		if child.Name == "QetsiyahMove" then
-			local Qetsiyah = child.Parent
-			Player.CFrame = Qetsiyah.HumanoidRootPart.CFrame
-		end
-	end
-end)
-
-Section:NewButton("BITE", "werewolf bite", function()
-    local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Humanoid = Character.Humanoid
-	local UserInputService = game:GetService("UserInputService")
-	local mouse = Player:GetMouse()
-	--local Debounce = true
-	local Key = 'U'
-	local db = true
-	UserInputService.InputBegan:Connect(function(input, IsTyping)
-		if IsTyping then return end
-		if input.KeyCode == Enum.KeyCode[Key] then
-			local A_1 = "Bite"
-			local A_2 = 
-				{
-					[1] = false, 
-					[2] = mouse.Target.Parent
-				}
-			local Event = game:GetService("ReplicatedStorage").Events.Werewolf
-			Event:FireServer(A_1, A_2)
-
-			UserInputService.InputBegan:Connect(function(input, IsTyping)
-				if IsTyping then return end
-				if input.KeyCode == Enum.KeyCode[Key] then
-					local A_1 = "Bite"
-					local A_2 = 
-						{
-							[1] = false, 
-							[2] = mouse.Target.Parent.Parent
-						}
-					local Event = game:GetService("ReplicatedStorage").Events.Werewolf
-					Event:FireServer(A_1, A_2)
-				end
-			end)
-		end
-	end)
-end)
-
-Section:NewButton("Fake Infinite Magic", "Teleport to Qet", function()
-local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Health = Character:WaitForChild("Magic")
-	local Max = Health.Max
-
-	Max.Value = 10000000000000000000000000000000000000
-	wait()
-	Health.Value = 10000000000000000000000000000000000000
-end)
-
-	local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Live = game.Workspace.Live
-	if Character.Head:FindFirstChild("Username") then
-		local NameTag = Character.Head:FindFirstChild("Username")
-		NameTag:Destroy()
-	end
-
-
-
-local Tab = Window:NewTab("Custom spells")
-
-local Tab = Window:NewTab("Teleports")
-Section:NewButton("ButtonText", "ButtonInfo", function()
 	
     print("Clicked")
 end)
 
-local Tab = Window:NewTab("Vampires")
+Section:NewButton("Delfan server", "ButtonInfo", function()
+	local Plr = game.Players.LocalPlayer
 
-local Tab = Window:NewTab("Credits")
+	for i, Player in pairs (game.Players:GetPlayers()) do
+		if Player.Character ~= nil and Player ~= Plr then
+			local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+			if mag < 999999 then
+				local Target = Player.Character or Player.CharacterAdded:Wait()
 
-local Section = Tab:NewSection("If you arent a member of the cunt ass, fuck off")
+				local A_1 = "Magic"
+				local A_2 = 
+					{
+						[1] = "TelekineticHeart",
+						[2] = Target
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Witch
+				Event:FireServer(A_1, A_2)
 
-local Section = Tab:NewSection("Creds to Stacey")
 
+			end
+		end
+	end
+
+end)
+    print("Clicked")
+
+Section:NewButton("Explode everyone", "ButtonInfo", function()
+	local Plr = game.Players.LocalPlayer
+
+	for i, Player in pairs (game.Players:GetPlayers()) do
+		if Player.Character ~= nil and Player ~= Plr then
+			local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+			if mag < 999999 then
+				local Target = Player.Character or Player.CharacterAdded:Wait()
+
+				local A_1 = "Magic"
+				local A_2 = 
+					{
+						[1] = "Explosion",
+						[2] = Target.HumanoidRootPart.CFrame.p
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Witch
+				Event:FireServer(A_1, A_2)
+
+
+			end
+		end
+	end
+
+end)
+    print("Clicked")
+
+Section:NewButton("Sleep everyone", "ButtonInfo", function()
+	local Plr = game.Players.LocalPlayer
+
+	for i, Player in pairs (game.Players:GetPlayers()) do
+		if Player.Character ~= nil and Player ~= Plr then
+			local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+			if mag < 999999 then
+				local Target = Player.Character or Player.CharacterAdded:Wait()
+
+				local A_1 = "Magic"
+				local A_2 = 
+					{
+						[1] = "SleepSpell",
+						[2] = Target
+					}
+				local Event = game:GetService("ReplicatedStorage").Events.Witch
+				Event:FireServer(A_1, A_2)
+
+
+			end
+		end
+	end
+
+end)
+Section:NewButton("Vervain loop", "ButtonInfo", function()
+	 local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Live = game.Workspace.Live
+	local RunService = game:GetService("RunService")
+	local Debounce = false
+
+	while task.wait(2) do
+		if not game.Players.LocalPlayer.Character:FindFirstChild("VervainBody") and game.Workspace.Live:FindFirstChild(game.Players.LocalPlayer.Character.Name) then
+			local A_1 = "Magic"
+			local A_2 = 
+				{
+					[1] = "VervainBody",
+					[2] = game.Players.LocalPlayer.Character
+				}
+			local Event = game:GetService("ReplicatedStorage").Events.Witch
+			Event:FireServer(A_1, A_2)
+		end
+	end
+end)
+Section:NewButton("Disable All rings", "ButtonInfo", function()
+		local Plr = game.Players.LocalPlayer
+	
+		for i, Player in pairs (game.Players:GetPlayers()) do
+			if Player.Character ~= nil and Player ~= Plr then
+				local mag = (Player.Character.UpperTorso.Position - Plr.Character.UpperTorso.Position).magnitude
+				if mag < 999999 then
+					local Target = Player.Character or Player.CharacterAdded:Wait()
+	
+					local A_1 = "Magic"
+					local A_2 = 
+						{
+							[1] = "DisableRing",
+							[2] = Target
+						}
+					local Event = game:GetService("ReplicatedStorage").Events.Witch
+					Event:FireServer(A_1, A_2)
+	
+	
+				end
+			end
+		end
+	end)
+Section:NewButton("Infinite Stamina", "ButtonInfo", function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Stamina = Character:WaitForChild("Stamina")
+	local Max = Stamina.Max
+
+	Max.Value = 5000000000000000000000
+	wait()
+	Stamina.Value = 5000000000000000000000
+end)
+
+    print("Clicked")
+    
+	Section:NewButton("other", "ButtonInfo", function()
+	    end)
+	    
