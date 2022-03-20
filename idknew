@@ -235,7 +235,6 @@ end)
 		local NameTag = Character.Head:FindFirstChild("Username")
 		NameTag:Destroy()
 	end
-end)
 
 
 
