@@ -365,18 +365,10 @@ Section:NewButton("Disable All rings", "ButtonInfo", function()
 			end
 		end
 	end)
-Section:NewButton("Infinite Stamina", "ButtonInfo", function()
-	local Player = game.Players.LocalPlayer
-	local Character = Player.Character
-	local Stamina = Character:WaitForChild("Stamina")
-	local Max = Stamina.Max
 
-	Max.Value = 9000000000000000
-	wait()
-	Stamina.Value = 9000000000000000
-end)
 
     print("Clicked")
+
 
 	local Tab = Window:NewTab("Misc")
 	local Section = Tab:NewSection("Misc")
@@ -437,6 +429,21 @@ end)
 		end
 	end)
 end)
+Section:NewButton("remove fall damage", "ButtonInfo", function()
+    local FallDamage = Rep.Events.FallDamage
+    FallDamage:Destroy()
+end)
+Section:NewButton("Infinite Stamina", "ButtonInfo", function()
+	local Player = game.Players.LocalPlayer
+	local Character = Player.Character
+	local Stamina = Character:WaitForChild("Stamina")
+	local Max = Stamina.Max
+
+	Max.Value = 9000000000000000
+	wait()
+	Stamina.Value = 9000000000000000
+end)
+
 
 
 local Section = Tab:NewSection("Qetsiyah")
@@ -571,13 +578,35 @@ Section:NewButton("Human Spawn", "telepor to human spawn ", function()
 	wait(0.1)
 	pl.CFrame = location
 end)
+local Section = Tab:NewSection("copy and paste")
+Section:NewButton("Ressurection spell", "ButtonInfo", function()
+    setclipboard([[/c Victus phasmatis ex eleto, revertas phasmatis ut victus]])
+end)
+    print("Clicked")
 
+Section:NewButton("Immobilus spell", "ButtonInfo", function()
+    setclipboard([[/c Immobilus]])
+end)
+Section:NewButton("Locator spell", "ButtonInfo", function()
+    setclipboard([[/c Phasmatos tribum, nas ex veras, sequitas sanguinem]])
+end)
+Section:NewButton("explosion spell", "ButtonInfo", function()
+    setclipboard([[/c Phasmatos tribum, nas ex veras, sequitas sanguinem]])
+end)
+Section:NewButton("Copy ring enable spell", "ButtonInfo", function()
+    setclipboard([[/c Phasmatos tribum, nas ex veras, sequitas sanguinem]])
+end)
+Section:NewButton("Copy ring disable", "ButtonInfo", function()
+    setclipboard([[/c Phasmatos tribum, vectus incendias malos]])
+end)
+    Section:NewButton("Copy ring making spell", "ButtonInfo", function()
+        setclipboard([[/c Phasmatos Tribum, Valls Partum Circulum]])
+    end)
+        Section:NewButton("Join code", function()
+            setclipboard([[
 
+                local TeleportService = game:GetService("TeleportService")
+            TeleportService:TeleportToPlaceInstance(4754736350,"]]..game.JobId..[[", game.Players.LocalPlayer)]])
+        end)
+            
 
-
-
-
-
-
-
-	
